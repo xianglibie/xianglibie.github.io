@@ -11,7 +11,7 @@
 <meta property="article:author" content="Ajie">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xianglibie.github.io/img/%E7%8B%90.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xianglibie.github.io/2021/11/11/[HCTF%202018]WarmUp(PHP%20%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1)/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://xianglibie.github.io/img/%E7%8B%90.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xianglibie.github.io/2021/11/11/[HCTF%202018]WarmUp(PHP%20%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1)/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -170,9 +170,11 @@
   function initValine () {
     const valine = new Valine(Object.assign({
       el: '#vcomment',
+      master:'91b3990822f2b4b0111bf205ff08ef6f',
+      friends:'',
       appId: 'KYaHkwQkymU0qJk1FLtRwRYR-gzGzoHsz',
       appKey: 'uMgNBKmoW89CMiDmwSuTVfcR',
-      placeholder: 'Please leave your footprints',
+      placeholder: '建议使用QQ邮箱，评论头像采用QQ头像',
       avatar: 'monsterid',
       meta: 'nick,mail,link'.split(','),
       pageSize: '10',
@@ -181,7 +183,7 @@
       serverURLs: '',
       emojiCDN: '',
       emojiMaps: "",
-      enableQQ: false,
+      enableQQ: true,
       path: window.location.pathname,
       requiredFields: ["nick,mail"],
       visitor: false
@@ -189,7 +191,7 @@
   }
 
   if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  else getScript('https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js').then(initValine)
 }
 
 if ('Valine' === 'Valine' || !false) {

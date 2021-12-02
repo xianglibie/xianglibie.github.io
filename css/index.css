@@ -3273,22 +3273,22 @@ li.categoryBar-list-item:nth-child(6) {
   background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover6.webp');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
-  content: 'Misc' !important;
+  content: '题解' !important;
 }
 li.categoryBar-list-item:nth-child(2)>span::after {
-  content: '杂谈教程' !important;
+  content: '杂记' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
-  content: '玩转Win10' !important;
+  content: !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
-  content: 'Ubuntu指南' !important;
+  content: !important;
 }
 li.categoryBar-list-item:nth-child(5)>span::after {
-  content: '个人日记' !important;
+  content: !important;
 }
 li.categoryBar-list-item:nth-child(6)>span::after {
-  content: '诗词歌赋' !important;
+  content: !important;
 }
 li.categoryBar-list-item {
   width: 32.3% !important;
@@ -4675,6 +4675,12 @@ li.categoryBar-list-item {
   -o-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+#vcomment textarea {
+  background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich30.gif") 100% 100% no-repeat;
+}
+#vcomment textarea:focus {
+  background-image: none;
 }
 .fireworks {
   position: fixed;
