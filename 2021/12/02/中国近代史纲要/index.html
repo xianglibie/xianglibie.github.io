@@ -156,24 +156,24 @@
       friends:'',
       appId: 'KYaHkwQkymU0qJk1FLtRwRYR-gzGzoHsz',
       appKey: 'uMgNBKmoW89CMiDmwSuTVfcR',
-      placeholder: '建议使用QQ邮箱，评论头像采用QQ头像',
+      placeholder: '昵称填写qq可以显示qq头像和昵称哦~',
       avatar: 'monsterid',
       meta: 'nick,mail,link'.split(','),
       pageSize: '10',
       lang: 'zh-CN',
-      recordIP: false,
+      recordIP: true,
       serverURLs: '',
       emojiCDN: '',
       emojiMaps: "",
       enableQQ: true,
       path: window.location.pathname,
       requiredFields: ["nick,mail"],
-      visitor: false
+      visitor: true
     }, null))
   }
 
   if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js').then(initValine)
+  else getScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js').then(initValine)
 }
 
 if ('Valine' === 'Valine' || !false) {
