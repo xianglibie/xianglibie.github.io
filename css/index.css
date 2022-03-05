@@ -3344,10 +3344,10 @@ li.categoryBar-list-item:nth-child(6) {
   background: linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
-  content: '题解' !important;
+  content: '博客配置' !important;
 }
 li.categoryBar-list-item:nth-child(2)>span::after {
-  content: '博客配置' !important;
+  content: '题解' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
   content: !important;
