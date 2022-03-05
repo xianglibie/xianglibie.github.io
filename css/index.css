@@ -1361,7 +1361,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url('/img/落.jpg');
+  background: url('https://gitee.com/xianglibie/image/raw/master/img/202203051929092.jpg');
   background-attachment: local;
   background-position: center;
   -webkit-background-size: cover;
@@ -3325,29 +3325,29 @@ li.categoryBar-list-item:nth-child(1) {
   background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover1.webp');
 }
 li.categoryBar-list-item:nth-child(2) {
-  background: #abcdef;
+  background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover5.webp');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: rgba(45,67,89,0.7);
+  background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover6.webp');
 }
 li.categoryBar-list-item:nth-child(4) {
+  background: #abcdef;
+}
+li.categoryBar-list-item:nth-child(5) {
+  background: rgba(45,67,89,0.7);
+}
+li.categoryBar-list-item:nth-child(6) {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
   background: -o-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
   background: -ms-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
   background: linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
 }
-li.categoryBar-list-item:nth-child(5) {
-  background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover5.webp');
-}
-li.categoryBar-list-item:nth-child(6) {
-  background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover6.webp');
-}
 li.categoryBar-list-item:nth-child(1)>span::after {
   content: '题解' !important;
 }
 li.categoryBar-list-item:nth-child(2)>span::after {
-  content: '杂记' !important;
+  content: '博客配置' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
   content: !important;
@@ -3362,7 +3362,7 @@ li.categoryBar-list-item:nth-child(6)>span::after {
   content: !important;
 }
 li.categoryBar-list-item {
-  width: 32.3% !important;
+  width: 24% !important;
 }
 @media screen and (max-width: 650px) {
   li.categoryBar-list-item {
@@ -4747,7 +4747,7 @@ li.categoryBar-list-item {
   transform: rotate(360deg);
 }
 #vcomment textarea {
-  background: url("/img/摔.png") 100% 100% no-repeat;
+  background: url("https://gitee.com/xianglibie/image/raw/master/img/202203051930211.png") 100% 100% no-repeat;
 }
 #vcomment textarea:focus {
   background-image: none;
