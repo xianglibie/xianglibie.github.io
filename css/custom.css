@@ -1,7 +1,7 @@
 /* 字体 */
 @font-face{
   font-family:'Candyhome' ;  /* 字体名自定义即可 */
-  src:url('/fonts/Candy.ttf') format("truetype"); /* 字体文件路径 */
+  src:url('/fonts/Candy.ttf'); /* 字体文件路径 */
   font-display : swap;
 }
 h1#site-title {
@@ -70,24 +70,14 @@ div#tag{
 div#category{
   background: rgba(255, 255, 255, 0.8);
 }
-/*滚动条
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px
+
+/* 歌单 */
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+  /* 默认情况下缩进左侧66px，只留一点箭头部分 */
 }
 
-::-webkit-scrollbar-track {
-    border-radius: 2em;
-    background-color: rgba(73, 177, 245, .2);
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0 !important;
+  /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
 }
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(255 255 255 / .3);
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-    border-radius: 2em
-}
-
-::-webkit-scrollbar-corner {
-    background-color: transparent
-}
-*/
