@@ -7,6 +7,12 @@
 h1#site-title {
   font-family: 'Candyhome', sans-serif;
 }
+span#subtitle {
+    font-family:Candyhome!important
+}
+a#site-name {
+    font-family:Candyhome!important
+}
 
 /* 页脚透明 */
 #footer{
@@ -71,7 +77,7 @@ div#category{
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* 歌单 */
+/* aplayer全局吸底歌单diy */
 .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
   left: -66px !important;
   /* 默认情况下缩进左侧66px，只留一点箭头部分 */
