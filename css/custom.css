@@ -4,6 +4,14 @@
   src:url('/fonts/Candy.ttf'); /* 字体文件路径 */
   font-display : swap;
 }
+@font-face{
+  font-family:'Coca-Cola' ;  /* 字体名自定义即可 */
+  src:url('/fonts/Coca-ColaCareFont-TextRegular.TTF'); /* 字体文件路径 */
+  font-display : swap;
+}
+body {
+    font-family: 'Coca-Cola','Candyhome';
+}
 h1#site-title {
   font-family: 'Candyhome', sans-serif;
 }
