@@ -3,14 +3,22 @@
   font-family:'Candyhome' ;  /* 字体名自定义即可 */
   src:url('/fonts/Candy.ttf'); /* 字体文件路径 */
   font-display : swap;
+  font-weight:lighter
+}
+@font-face {
+    font-family:'ZhuZiAYuanJWD' ;
+    src:url('https://cdn.jsdelivr.net/npm/akilar-candyassets/fonts/ZhuZiAWan.woff2');
+    font-display:swap;
+    font-weight:lighter
 }
 @font-face{
-  font-family:'Coca-Cola' ;  /* 字体名自定义即可 */
-  src:url('/fonts/Coca-ColaCareFont-TextRegular.TTF'); /* 字体文件路径 */
+  font-family:'Coca' ; 
+  src:url('/fonts/Coca-ColaCareFont-TextRegular.TTF');
   font-display : swap;
+  font-weight:lighter
 }
 body {
-    font-family: 'Coca-Cola','Candyhome';
+    font-family: 'ZhuZiAYuanJWD','Candyhome';
 }
 h1#site-title {
   font-family: 'Candyhome', sans-serif;
