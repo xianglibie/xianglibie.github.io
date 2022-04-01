@@ -3371,10 +3371,10 @@ span.categoryBar-list-count::after {
   right: -100%;
 }
 li.categoryBar-list-item:nth-child(1) {
-  background: url('https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203111703454.jpg');
+  background: url('https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203111657833.jpg');
 }
 li.categoryBar-list-item:nth-child(2) {
-  background: url('https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203111657833.jpg');
+  background: url('https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203111703454.jpg');
 }
 li.categoryBar-list-item:nth-child(3) {
   background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover6.webp');

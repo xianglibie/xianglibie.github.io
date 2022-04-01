@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title></title>
+      <title>SQL盲注</title>
       <link href="/posts/%5B%E7%AC%AC%E4%B8%80%E7%AB%A0%20web%E5%85%A5%E9%97%A8%5DSQL%E6%B3%A8%E5%85%A5-2/"/>
       <url>/posts/%5B%E7%AC%AC%E4%B8%80%E7%AB%A0%20web%E5%85%A5%E9%97%A8%5DSQL%E6%B3%A8%E5%85%A5-2/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="SQL盲注"><a href="#SQL盲注" class="headerlink" title="SQL盲注"></a>SQL盲注</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>题目地址:<a href="https://buuoj.cn/challenges#%5B%E7%AC%AC%E4%B8%80%E7%AB%A0%20web%E5%85%A5%E9%97%A8%5DSQL%E6%B3%A8%E5%85%A5-2">[第一章 web入门]SQL注入-2</a></p><p>本题是一个SQL盲注题，可以基于布尔也可以基于时间，同时还可以根据提示在网址后面加一个<code>?tips=1</code>降低难度成为一个基于报错的盲注。</p><h2 id="解法一：布尔盲注"><a href="#解法一：布尔盲注" class="headerlink" title="解法一：布尔盲注"></a>解法一：布尔盲注</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>首先根据题目描述访问 /login.php 可以进入登陆界面</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202204011800320.png" alt="image-20220328212128757"></p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202204011800333.png" alt="image-20220328212258191"></p><p>只有用admin登录时显示账号或密码错误，用其他账号登录都会显示账号不存在。这里可以看出两点：</p><ul><li>默认用户是admin</li><li>用户名栏可以判断我们的输入是<code>True</code> 还是<code>False</code></li></ul><p>burp抓包并发送试试：</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202204011800280.png" alt="image-20220328212836448"></p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202204011800401.png" alt="image-20220328212922072"></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin: &#123;&quot;error&quot;:1,&quot;msg&quot;:&quot;\u8d26\u53f7\u6216\u5bc6\u7801\u9519\u8bef&quot;&#125;</span><br><span class="line">abcd:  &#123;&quot;error&quot;:1,&quot;msg&quot;:&quot;\u8d26\u53f7\u4e0d\u5b58\u5728&quot;&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> CTF </category>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+        </tags>
       
     </entry>
     
