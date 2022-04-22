@@ -16,3 +16,24 @@ document.addEventListener('visibilitychange', function () {
         }, 2000);
     }
 });
+//禁用F12、右键、F5
+document.onkeydown = function () {
+  if (window.event && window.event.keyCode == 123) {
+    event.keyCode = 0;
+    event.returnValue = false;
+    new Vue({
+      data:function(){
+        this.$notify({
+          title:"啊啊！你干嘛啊！",
+          message:"怎么能随随便便耍流氓呢？坏！",
+          position: 'bottom-right',
+          offset: 50,
+          showClose: false,
+          type:"error"
+        });
+        return{visible:false}
+      }
+    })
+    return false;
+  }
+};

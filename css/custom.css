@@ -82,7 +82,7 @@ div#category{
   background: rgba(255, 255, 255, 0.8);
 }
 
-/*夜间模式框框背景黑色*/
+/*夜间模式背景黑色*/
 [data-theme="dark"]
 #recent-posts > .recent-post-item{
     background:rgba(0, 0, 0, 0.5);
