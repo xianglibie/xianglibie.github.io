@@ -16,7 +16,7 @@ document.addEventListener('visibilitychange', function () {
         }, 2000);
     }
 });
-//禁用F12、右键、F5
+//禁用F12
 document.onkeydown = function () {
   if (window.event && window.event.keyCode == 123) {
     event.keyCode = 0;
@@ -24,8 +24,8 @@ document.onkeydown = function () {
     new Vue({
       data:function(){
         this.$notify({
-          title:"啊啊！你干嘛啊！",
-          message:"怎么能随随便便耍流氓呢？坏！",
+          title:"你在干嘛！",
+          message:"怎么能随随便便耍流氓呢？",
           position: 'bottom-right',
           offset: 50,
           showClose: false,
