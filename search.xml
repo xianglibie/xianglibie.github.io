@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/posts/%E7%BE%8A%E5%9F%8E%E6%9D%AF-%5BMisc%5D%E8%BF%B7%E5%A4%B1%E7%8E%AF%E5%A2%83/"/>
-      <url>/posts/%E7%BE%8A%E5%9F%8E%E6%9D%AF-%5BMisc%5D%E8%BF%B7%E5%A4%B1%E7%8E%AF%E5%A2%83/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="羊城杯-Misc-迷失环境"><a href="#羊城杯-Misc-迷失环境" class="headerlink" title="羊城杯-[Misc]迷失环境"></a>羊城杯-[Misc]迷失环境</h2><p>打开附件是一个.vmdk文件，这种文件可以用7z解压打开</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202209041956751.png" alt="image-20220904195617638"></p><p>这里主要看<code>迷失环境</code>和<code>RECYCLE.BIN</code>这两个文件夹<br>在RECYCLE.BIN(回收站)文件夹中可以发现前两个文件比较大</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202209041959951.png" alt="image-20220904195943892"></p><p>第一个文件用010打开发现缺少PNG文件头</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202209042001451.png" alt="image-20220904200117407"></p><p>补充后保存，打开是一张和迷失环境文件夹中图片一样的图片</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202209042005766.png" alt="image-20220904200549559"></p><p>在其中任选一张和刚刚还原的图片在stegsolve中进行图像合并</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202209042008246.png" alt="image-20220904200859189"></p><p>得到 <code>key is:可莉前来报到</code></p><p>回收站中另一张图片打开是一张可莉，kali中进行outguess隐写解密</p><p><img src="https://cdn.jsdelivr.net/gh/xianglibie/image@main/202209042011744.png" alt="image-20220904201107697"></p><p>成功得到flag</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2022巅峰极客(Volatility)</title>
       <link href="/posts/2022%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2%E5%A4%8D%E7%8E%B0(volatility)/"/>
       <url>/posts/2022%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2%E5%A4%8D%E7%8E%B0(volatility)/</url>
