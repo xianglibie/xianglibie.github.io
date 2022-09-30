@@ -3371,13 +3371,13 @@ span.categoryBar-list-count::after {
   right: -100%;
 }
 li.categoryBar-list-item:nth-child(1) {
-  background: url('https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203111657833.jpg');
+  background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302251080.jpeg');
 }
 li.categoryBar-list-item:nth-child(2) {
-  background: url('https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203111703454.jpg');
+  background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302251402.jpeg');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: url('https://cdn.jsdelivr.net/npm/akilar-candyassets/image/cover6.webp');
+  background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302252744.webp');
 }
 li.categoryBar-list-item:nth-child(4) {
   background: #abcdef;
@@ -4800,7 +4800,7 @@ li.categoryBar-list-item {
   transform: rotate(360deg);
 }
 #vcomment textarea {
-  background: url("https://cdn.jsdelivr.net/gh/xianglibie/image@main/202203051930211.png") 100% 100% no-repeat;
+  background: url("https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302254465.png") 100% 100% no-repeat;
 }
 #vcomment textarea:focus {
   background-image: none;
