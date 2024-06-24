@@ -3377,7 +3377,7 @@ li.categoryBar-list-item:nth-child(2) {
   background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302251402.jpeg');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302252744.webp');
+  background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202406241547336.png');
 }
 li.categoryBar-list-item:nth-child(4) {
   background: #abcdef;
@@ -3399,7 +3399,7 @@ li.categoryBar-list-item:nth-child(2)>span::after {
   content: '题解' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
-  content: !important;
+  content: '随笔' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
   content: !important;
