@@ -3380,12 +3380,15 @@ li.categoryBar-list-item:nth-child(3) {
   background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202406241547336.png');
 }
 li.categoryBar-list-item:nth-child(4) {
-  background: #abcdef;
+  background: url('https://cdn.moran233.xyz/https://raw.githubusercontent.com/xianglibie/image/main/202409031737024.jpg');
 }
 li.categoryBar-list-item:nth-child(5) {
-  background: rgba(45,67,89,0.7);
+  background: #abcdef;
 }
 li.categoryBar-list-item:nth-child(6) {
+  background: rgba(45,67,89,0.7);
+}
+li.categoryBar-list-item:nth-child(7) {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
   background: -o-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
@@ -3402,7 +3405,7 @@ li.categoryBar-list-item:nth-child(3)>span::after {
   content: '随笔' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
-  content: !important;
+  content: '练习' !important;
 }
 li.categoryBar-list-item:nth-child(5)>span::after {
   content: !important;
